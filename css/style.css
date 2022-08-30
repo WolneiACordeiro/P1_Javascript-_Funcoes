@@ -1,0 +1,141 @@
+
+@font-face{
+    font-family: "ComicBook-Regular";
+    src: url("../fonts/ComicBook.woff")
+}
+
+@font-face{
+    font-family: "ComicBook-Bold";
+    src: url("../fonts/ComicBookBold.woff")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "ComicBook-Regular";
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+}
+
+.form-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFBE00;
+    width: 30%;
+    min-height: 50%;
+    padding-bottom: 5%;
+}
+
+.input-block input {
+    height: 2rem;
+    width: 100%;
+    margin-top: 0.8rem;
+    background: #fff;
+    border: 0px;
+    outline: 0;
+    padding: 0 1.6rem;
+    font: 1.6rem "ComicBook-Regular";
+}
+
+.input-block {
+    margin-top: 1.8rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-block label {
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.input-block:focus-within::after {
+    content: "";
+
+    width: calc(100% - 3.2rem);
+    height: 2px;
+    background: #FF0000;
+
+    position: absolute;
+    left: 1.6rem;
+    bottom: 0px;
+}
+
+.submit-button {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.submit-button input {
+    font-family: 'ComicBook-Regular';
+    border: 0;
+    width: 8rem;
+    height: 3rem;
+    text-transform: uppercase;
+}
+
+.submit-button input:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: ease-in-out .3s;
+}
+
+.submit-button input:active {
+    cursor: pointer;
+    transform: scale(.8);
+}
+
+.input-radio {
+    margin-top: 18px;
+    font-size: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#mostrar-heroi {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#mostrar-heroi img {
+    width: -50%;
+    margin: 25px 25px;
+}
+
+#universe-block {
+    visibility: visible;
+}
+
+#hero-block {
+    visibility: hidden;
+}
+
+#repeat-block {
+    visibility: hidden;
+}
+
+#submit-block {
+    visibility: hidden;
+}
+
+#radio-block {
+    visibility: hidden;
+}

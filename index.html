@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <Title>Javascript - Marvel & DC</Title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+
+    <div id="container">
+        <div class="form-area">
+            <form name="marvel-dc" action="">
+                <div id="universe-block" class="input-block">
+                    <label for="universo"><b>Digite o nome de um universo:</b></label>
+                    <input type="text" id="universo" name="usuario_universo" oninput="showHero()" onpaste="universeChange(), limparHeroi()" value="">
+                </div>
+                <h3 id="universo-validacao"></h3>
+                <div id="hero-block" class="input-block">
+                    <label for="heroi"><b id="heroi-universo">Digite o nome de um herói:</b></label>
+                    <input type="text" id="heroi" name="usuario_heroi" oninput="showSend()" value="">
+                </div>
+                <h3 id="heroi-validacao"></h3>
+                <div id="repeat-block" class="input-block">
+                    <label for="repetir"><b id="heroi-repetir">Quantas vezes ele irá aparecer:</b></label>
+                    <input type="number" id="num1" min="1" max="50" value="1" oninput="limparHeroi()">
+                    <input type="number" id="num2" min="1" max="50" value="1" oninput="limparHeroi()">
+                </div>
+                <div id="radio-block" class="input-block, input-radio">
+                    <input type="radio" name="opt" value="+" checked="true"> +
+                    <input type="radio" name="opt" value="-"> -
+                    <input type="radio" name="opt" value="/"> /
+                    <input type="radio" name="opt" value="*"> *
+                </div>
+                <div id="submit-block" class="submit-button">
+                    <input type="submit" value="Enviar" form="marvel-dc" onclick="showResult()">
+                </div>
+            </form>
+        </div>
+        <div id="mostrar-heroi">
+
+        </div>
+    </div>
+</body>
+
+</html>
